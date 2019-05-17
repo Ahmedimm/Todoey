@@ -12,9 +12,15 @@ class TodoListVC: UITableViewController {
     
     
     var itemArray = ["First Action","Second Action","Third Action"]
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "TodoListArray") as? [String] {
+            itemArray = items
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +33,7 @@ class TodoListVC: UITableViewController {
         return cell
     }
     
-//MARK - TableView Delegate Methods
+    //MARK - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -39,7 +45,7 @@ class TodoListVC: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-//MARK -  add new items
+    //MARK -  add new items
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -49,6 +55,7 @@ class TodoListVC: UITableViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             // what should happen when user press add item
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: "TodoListArray")
             self.tableView.reloadData()
             print(self.itemArray)
         }
