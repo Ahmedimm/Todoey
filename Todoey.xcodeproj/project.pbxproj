@@ -13,8 +13,9 @@
 		F1143E67228EBA7B00AB9AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1143E65228EBA7B00AB9AB3 /* Main.storyboard */; };
 		F1143E69228EBA7C00AB9AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1143E68228EBA7C00AB9AB3 /* Assets.xcassets */; };
 		F1143E6C228EBA7C00AB9AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1143E6A228EBA7C00AB9AB3 /* LaunchScreen.storyboard */; };
-		F12A8D0A2291E66A00FD0017 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12A8D082291E66A00FD0017 /* DataModel.xcdatamodeld */; };
 		F12A8D2F2297188D00FD0017 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12A8D2E2297188D00FD0017 /* CategoryViewController.swift */; };
+		F19B15B42297471200091E15 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B15B32297471200091E15 /* Item.swift */; };
+		F19B15B62297472A00091E15 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B15B52297472A00091E15 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		F1143E68228EBA7C00AB9AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1143E6B228EBA7C00AB9AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1143E6D228EBA7C00AB9AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12A8D092291E66A00FD0017 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		F12A8D2E2297188D00FD0017 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F19B15B32297471200091E15 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F19B15B52297472A00091E15 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				AFA408E77A4F82A6503F67A1 /* Pods-Todoey.debug.xcconfig */,
 				1A900E3E4B13C4A725D9B5F4 /* Pods-Todoey.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -96,7 +97,8 @@
 		F1ADA198228F4160005A306D /* Date Model */ = {
 			isa = PBXGroup;
 			children = (
-				F12A8D082291E66A00FD0017 /* DataModel.xcdatamodeld */,
+				F19B15B52297472A00091E15 /* Category.swift */,
+				F19B15B32297471200091E15 /* Item.swift */,
 			);
 			path = "Date Model";
 			sourceTree = "<group>";
@@ -249,10 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19B15B42297471200091E15 /* Item.swift in Sources */,
 				F12A8D2F2297188D00FD0017 /* CategoryViewController.swift in Sources */,
 				F1143E64228EBA7B00AB9AB3 /* TodoListVC.swift in Sources */,
-				F12A8D0A2291E66A00FD0017 /* DataModel.xcdatamodeld in Sources */,
 				F1143E62228EBA7B00AB9AB3 /* AppDelegate.swift in Sources */,
+				F19B15B62297472A00091E15 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,19 +457,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F12A8D082291E66A00FD0017 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F12A8D092291E66A00FD0017 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = F12A8D092291E66A00FD0017 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F1143E56228EBA7B00AB9AB3 /* Project object */;
 }
